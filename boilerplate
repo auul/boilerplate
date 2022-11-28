@@ -583,7 +583,8 @@ case $type in
 		echo "" >> $makepath
 		echo "\$(LIB): \$(OBJECTS)" >> $makepath
 		echo -e "\t\$(ARC) \$(ARCFLAGS) \$@ \$^" >> $makepath
-		echo -e "\tcp lib$@.a ./test/lib" >> $makepath
+		echo -e "\tcp lib$@.a ./test/lib/" >> $makepath
+		echo -e "\tcp include/$@.h ./test/include/" >> $makepath
 		echo "" >> $makepath
 		echo "%.o:%.c" >> $makepath
 		echo -e "\t\$(CC) \$(CFLAGS) -c -o \$@ \$<" >> $makepath
