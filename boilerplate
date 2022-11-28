@@ -645,3 +645,6 @@ esac
 
 # Create the version file
 echo "v0.0.0" > $pathto/version
+
+# Create the README.md file
+echo "# $project" > $pathto/README.md
